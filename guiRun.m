@@ -1,0 +1,2 @@
+load net
+handGesturetest(net)
