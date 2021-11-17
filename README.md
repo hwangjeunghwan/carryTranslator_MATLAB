@@ -1,21 +1,27 @@
 # CarryTranslator
-sw 공개 소프트웨어 출품작
- 
-- Languae : Matlab
+키넥트와 매트랩을 활용한 청각 장애인을 위한 수화 통역 시스템
 
-# 내용
-  - ## Start
-    ``` 
-    - guiRun 실행
-    ```
-    
-  - ## 수화 사진 추가 방법
-    ```
-     - handGestureDataset 코드의 폴더를 바꾼후 
-      손 모양을 취하면 손을 인식하여 자동으로 저장됨
-    ```
-     
-  - ## 딥러닝 학습방법
-    ```
-     - trainingAndTest 에서 폴더명을 바꾼후 학습시킨다.  
-    ```
+# 실행전 준비물
+MATLAB, Kinect v1, kinect SDK v1.8 설치
+
+# MATLAB 애드온
+ 1. Image Acquisition Toolbox Support Package for Kinect for Windows Sensor
+ 2. Image Acquisition Toolbox
+ 3. Computer Vision Toolbox
+ 4. Deep Learning Toolbox
+ 5. Deep Learning Toolbox Model for GoogLeNet Network
+ 6. Audio Toolbox
+ 7. speech2text
+ 8. text2speech
+
+# 실행방법
+guiRun.m 실행<br>
+
+# 학습 데이터 생성방법
+궤적학습 시 - 궤적학습폴더의 bodyGestureDataset에 *90* 번 라인 파일명 저장<br>
+지화학습 시 - 지화학습폴더의 handGestureDataset에 *98* 번 라인 파일명 저장<br>
+
+# 학습 방법
+각폴더의 ____GestureTraining 실행 <br>
+**지화 학습** 시 *net* 파일 생성 <br>
+**궤적 학습** 시 *netLSTM* 파일 생성 <br>
